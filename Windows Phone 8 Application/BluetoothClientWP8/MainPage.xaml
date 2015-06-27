@@ -1,0 +1,75 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="BluetoothClientWP8.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBox x:Name="DeviceName" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="RN42-7709" VerticalAlignment="Center" Width="255"/>
+            <Button Name="ConnectAppToDeviceButton" Click="ConnectAppToDeviceButton_Click_1" Width="200" Height="80" Content="Connect" />
+        </StackPanel>
+        
+        
+        
+        <Image Source="Images\gaurdian.jpg" Grid.Row="2" Grid.Column="1"  />
+
+        <StackPanel x:Name="Tile1" Grid.Row="1" Grid.Column="0" Background="{StaticResource PhoneAccentBrush}" Orientation="Horizontal">
+            <Image Source="Images\lasertag.jpg" Tap="Tile1_Tap" />
+        </StackPanel>
+
+        <StackPanel x:Name="Tile2" Grid.Row="1" Grid.Column="1" Background="{StaticResource PhoneAccentBrush}" Orientation="Horizontal">
+            <Image Source="Images\gaurdian.jpg" Tap="Tile2_Tap" />
+        </StackPanel>
+
+        <StackPanel x:Name="Tile3" Grid.Row="2" Grid.Column="0" Background="{StaticResource PhoneAccentBrush}" Orientation="Horizontal">
+            <TextBlock x:Name="Life" Text="Life" FontSize="70"/>
+            
+        </StackPanel>
+
+        <StackPanel x:Name="Tile4" Grid.Row="2" Grid.Column="1" Background="{StaticResource PhoneAccentBrush}" Orientation="Horizontal">
+            <TextBlock x:Name="Coordinates" Text="Lat, Long" FontSize="16" />
+        </StackPanel>
+
+        <StackPanel x:Name="Tile5" Grid.Row="3" Grid.Column="0" Background="{StaticResource PhoneAccentBrush}" Orientation="Horizontal">
+            <Image Source="Images\thermometer.jpg" Tap="Tile3_Tap"  />
+        </StackPanel>
+
+        <StackPanel x:Name="Tile6" Grid.Row="3" Grid.Column="1" Background="{StaticResource PhoneAccentBrush}" Orientation="Horizontal">
+            <TextBlock x:Name="Temp" Text="Temp" FontSize="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            
+            
+         </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBlock x:Name="BodyDetectionStatus" HorizontalAlignment="Left" TextWrapping="Wrap" Text="All fine" VerticalAlignment="Top" Width="460" FontSize="36" TextAlignment="Center"/>
+        </StackPanel>
+
+        </Grid>
+
+</phone:PhoneApplicationPage>
